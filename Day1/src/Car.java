@@ -4,7 +4,7 @@ public class Car {
     int minSpeed = 0;
     double weight = 4079;
     boolean isTheCarOn = false;
-    String condition = "A";
+    char condition = 'A';
 
     public void printVariables() {
         System.out.println(maxSpeed);
@@ -15,9 +15,22 @@ public class Car {
 
     }
 
-    public static void main(String[] args) {
-        Car toyota = new Car();
-        toyota.printVariables();
+    public void wreckCar() {
+        condition = 'C';
+    }
 
+    public void changeSpeed() {
+        minSpeed = maxSpeed;
+        maxSpeed = maxSpeed + 3;
+    }
+
+    public static void main(String[] args) {
+        Car familyCar = new Car();
+        familyCar.printVariables();
+        Car aliceCar = familyCar;
+        familyCar.wreckCar();
+//        aliceCar.printVariables();
+        aliceCar.changeSpeed();
+        familyCar.printVariables();
     }
 }
