@@ -1,4 +1,4 @@
-public class Day1 {
+public class Solution {
     public static void main(String[] args) {
 //        5.35
         System.out.println("Primitive : double");
