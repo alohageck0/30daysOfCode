@@ -16,6 +16,8 @@ public class Car {
     }
 
     public static void main(String[] args) {
+        Car toyota = new Car();
+        toyota.printVariables();
 
     }
 }
