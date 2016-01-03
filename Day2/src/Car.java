@@ -9,7 +9,7 @@ public class Car {
     double maxFuel = 16;
     double currentFuel = 8;
     double mpg = 26.4;
-    int numberOfPeopleInCar = 4;
+    int numberOfPeopleInCar = 1;
 
     public Car(int customMaxSpeed) {
         maxSpeed = customMaxSpeed;
@@ -22,7 +22,12 @@ public class Car {
         System.out.println(weight);
         System.out.println(isTheCarOn);
         System.out.println(condition);
+        System.out.println(numberOfPeopleInCar);
 
+    }
+
+    public void getIn(int numberOfPeople) {
+        numberOfPeopleInCar += numberOfPeople;
     }
 
     public void wreckCar() {
@@ -36,6 +41,7 @@ public class Car {
 
     public static void main(String[] args) {
         Car presentCar = new Car(50);
+        presentCar.getIn(2);
         presentCar.printVariables();
     }
 }
