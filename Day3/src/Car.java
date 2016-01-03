@@ -67,6 +67,14 @@ public class Car {
         Car presentCar = new Car();
         presentCar.getOut();
         presentCar.getOut();
+        presentCar.getIn();
+        presentCar.getIn();
+        presentCar.getIn();
+        presentCar.getIn();
+        presentCar.getIn();
+        presentCar.getIn();
+        presentCar.getIn();
+        presentCar.getIn();
 
     }
 }
