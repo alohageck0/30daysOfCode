@@ -30,7 +30,7 @@ public class Car {
     }
 
     public void setMaxSpeed(int maxSpeedValue) {
-        maxSpeed = maxSpeedValue;
+        this.maxSpeed = maxSpeedValue;
     }
 
     public int getMinSpeed() {
