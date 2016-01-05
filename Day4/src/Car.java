@@ -1,7 +1,7 @@
 public class Car {
 
-    int maxSpeed = 100;
-    int minSpeed = 0;
+    private int maxSpeed = 100;
+    private int minSpeed = 0;
     double weight = 4079;
     boolean isTheCarOn = false;
     char condition = 'A';
@@ -26,7 +26,19 @@ public class Car {
     // Getters and setters
 
     public int getMaxSpeed() {
-        return maxSpeed;
+        return this.maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeedValue) {
+        maxSpeed = maxSpeedValue;
+    }
+
+    public int getMinSpeed() {
+        return this.minSpeed;
+    }
+
+    public void upgradeMaxSpeed() {
+        setMaxSpeed(getMaxSpeed() + 10);
     }
 
     public void printVariables() {
@@ -70,16 +82,7 @@ public class Car {
 
     public static void main(String[] args) {
         Car presentCar = new Car();
-        presentCar.getOut();
-        presentCar.getOut();
-        presentCar.getIn();
-        presentCar.getIn();
-        presentCar.getIn();
-        presentCar.getIn();
-        presentCar.getIn();
-        presentCar.getIn();
-        presentCar.getIn();
-        presentCar.getIn();
-
+        presentCar.printVariables();
+        System.out.println(presentCar.minSpeed);
     }
 }
