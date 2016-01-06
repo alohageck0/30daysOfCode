@@ -1,22 +1,30 @@
 import java.util.Scanner;
 
 public class Solution {
+    public static int getNumberOfTestcases() {
+        Scanner numberOfTestcases = new Scanner(System.in);
+        return numberOfTestcases.nextInt();
+    }
 
     public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        String ans = null;
-        if (n % 2 == 1) {
-            ans = "Weird";
-        } else if (n % 2 == 0 & n >= 2 & n <= 5) {
-            ans = "Not Weird";
-        } else if (n % 2 == 0 & n >= 6 & n <= 20) {
-            ans = "Weird";
-        } else if (n % 2 == 0 & n >= 20) {
-            ans = "Not Weird";
+        int n = getNumberOfTestcases();
+        for (int x = 0; x < n; x++) {
+            Scanner strin = new Scanner(System.in);
+            int a = strin.nextInt();
+            int b = strin.nextInt();
+            int N = strin.nextInt();
+            int sum = 0;
+            for (int y = 0; y < N; y++) {
+                if (y == 0) {
+                    sum = a + b;
+                    System.out.print(sum);
+                } else {
+                    sum = (int) (sum + Math.pow(2, y) * b);
+                }
+                System.out.print(" " + sum);
+            }
         }
-        System.out.println(ans);
+
 
     }
 }
