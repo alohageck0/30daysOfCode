@@ -31,7 +31,8 @@ public class Solution {
                     result.append(" " + sum);
                 }
             }
-            results.add(x, result.toString());
+            System.out.println(result);
+//            results.add(result.toString());
         }
         for (int x = 0; x < getNumberOfTestcases(); x++) {
             System.out.println(results.get(x));
