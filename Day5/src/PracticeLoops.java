@@ -10,14 +10,26 @@ public class PracticeLoops {
             x++;
         }
     }
-    public static void practiceDoWhileLoop(){
+
+    public static void practiceDoWhileLoop() {
         int x = 0;
         do {
-            System.out.println("Value of x is "+ x);
+            System.out.println("Value of x is " + x);
             x++;
-        }while (x<5);
+        } while (x < 5);
     }
+
+    public static void practiceForLoop() {
+        for (int x = 0; x < 10; x++) {
+            for (int y = 0; y < 10; y++) {
+                System.out.println("(" + x + ", " + y + ")");
+
+            }
+
+        }
+    }
+
     public static void main(String[] args) {
-        practiceDoWhileLoop();
+        practiceForLoop();
     }
 }
