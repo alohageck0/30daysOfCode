@@ -9,9 +9,12 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-
+        Scanner testcase = new Scanner(System.in);
         ArrayList<String> results = new ArrayList<>();
-        for (int x = 0; x < getNumberOfTestcases(); x++) {
+        int numberOfTests = testcase.nextInt();
+//        System.out.println(numberOfTests);
+        int x;
+        for (x = 0; x < numberOfTests; x++) {
             Scanner strin = new Scanner(System.in);
             int a = strin.nextInt();
             int b = strin.nextInt();
@@ -27,12 +30,11 @@ public class Solution {
                     result.append(" " + sum);
                 }
             }
-            results.add(x, result.toString());
+            results.add(result.toString());
         }
-        for (int x = 0; x < getNumberOfTestcases(); x++) {
+        for (x = 0; x < numberOfTests; x++) {
             System.out.println(results.get(x));
         }
-
     }
 }
 
