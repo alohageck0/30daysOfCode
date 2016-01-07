@@ -1,12 +1,17 @@
+import com.sun.tools.javac.util.StringUtils;
+
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        for (int i = 0, c = s.nextInt(); i < c; i++) {
-            for (int k = 0, a = s.nextInt(), b = s.nextInt(), n = s.nextInt(); k < n; k++)
-                System.out.print((a += b * (int) Math.pow(2, k)) + " ");
-            System.out.println();
+        String rr = "#";
+        int n = s.nextInt();
+        for (int x = n; x > 0; x--) {
+
+            System.out.println(rr.join("", Collections.nCopies(x, " "))
+                    + rr.join("", Collections.nCopies(n - x + 1, rr)));
         }
     }
 }
