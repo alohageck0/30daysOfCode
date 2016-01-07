@@ -8,10 +8,6 @@ public class Solution {
         return numberOfTestcases.nextInt();
     }
 
-    public static String printResult(StringBuilder stringBuilder) {
-        return stringBuilder.toString();
-    }
-
     public static void main(String[] args) {
 
         ArrayList<String> results = new ArrayList<>();
