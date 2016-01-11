@@ -2,18 +2,18 @@ import java.util.Scanner;
 
 public class Solution {
 
-    public static String toBinary(int decimal, StringBuilder result) {
+    public static StringBuilder toBinary(int decimal, StringBuilder result) {
         if (decimal == 0) {
-            result.append(1);
-            return result.reverse().toString();
+            result.append(0);
+            return result;
         }
         while (decimal != 1) {
             int reminder = decimal % 2;
             result.append(reminder);
             return toBinary(decimal / 2, result);
         }
-        result.append(0);
-        return result.reverse().toString();
+        result.append(1);
+        return result;
     }
 
     public static void main(String[] args) {
