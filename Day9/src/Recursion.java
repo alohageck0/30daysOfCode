@@ -28,8 +28,14 @@ public class Recursion {
     }
 
     public static void main(String[] args) {
-        System.out.println(summation(3));
-        System.out.println(factorial(5));
-        System.out.println(exponentiation(5, 3));
+//        System.out.println(summation(3));
+//        System.out.println(factorial(5));
+//        System.out.println(exponentiation(5, 3));
+        System.out.println(96%420);
+        System.out.println(420%96);
+        String test = new String();
+        test = "ABCFGHFGH";
+        System.out.println(test.contains("fgh"));
+
     }
 }
