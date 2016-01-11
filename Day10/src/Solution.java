@@ -21,8 +21,7 @@ public class Solution {
         int testcases = sc.nextInt();
         for (int n = 0; n < testcases; n++) {
             StringBuilder result = new StringBuilder();
-            int testcase = sc.nextInt();
-            toBinary(testcase, result);
+            toBinary(sc.nextInt(), result);
             System.out.println(result.reverse().toString());
         }
     }
