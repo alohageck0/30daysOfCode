@@ -49,7 +49,7 @@ public class LibraryCatalogue {
 
     //Setters
 
-    public void nextDay(int day) {
+    public void nextDay() {
         currentDay++;
     }
 
@@ -64,7 +64,7 @@ public class LibraryCatalogue {
             sorryBookCHeckedOut(book);
         } else {
             book.setCheckedOut(true, currentDay);
-            System.out.println("You just checked out " + title + ". It is due on day" + (getCurrentDay() + getLengthOfCheckOut()) + ".");
+            System.out.println("You just checked out " + title + ". It is due on day " + (getCurrentDay() + getLengthOfCheckOut()) + ".");
         }
     }
 
@@ -75,7 +75,7 @@ public class LibraryCatalogue {
             System.out.println("You owe library $" + (getInitialLateFee()
                     + getFeePerLateDay() * daysLate)
                     + " because your book is "
-                    + daysLate + " days over due");
+                    + daysLate + " days over due.");
         } else {
             System.out.println("Thank you");
         }
@@ -89,6 +89,18 @@ public class LibraryCatalogue {
     }
 
     public static void main(String[] args) {
-
+        Map<String, Book> bookColection = new HashMap<>();
+        Book harry = new Book("Harry Potter", 3434, 999);
+        bookColection.put("Harry Potter", harry);
+        LibraryCatalogue lib = new LibraryCatalogue(bookColection);
+        lib.checkOut("Harry Potter");
+        lib.nextDay();
+        lib.nextDay();
+        lib.checkOut("Harry Potter");
+        lib.nextDay();
+        lib.nextDay();
+        lib.setDay(17);
+        lib.returnBook("Harry Potter");
+        lib.checkOut("Harry Potter");
     }
 }
