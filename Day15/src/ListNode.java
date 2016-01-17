@@ -6,4 +6,22 @@ public class ListNode {
         this.item = item;
         this.next = next;
     }
+
+    public ListNode(int item) {
+        this(item, null);
+    }
+
+    public void insertAfter(int item) {
+        this.next = new ListNode(item, next);
+    }
+
+    public ListNode nth(int position) {
+        if (position == 1) {
+            return this;
+        } else if ((position < 1) || (next == null)) {
+            return null;
+        } else {
+            return next.nth(position - 1);
+        }
+    }
 }
