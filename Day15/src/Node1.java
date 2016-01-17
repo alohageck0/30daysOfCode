@@ -1,19 +1,19 @@
-public class Node {
+public class Node1 {
     //Properties
-    Node next;
+    Node1 next;
     int data;
 
     //Constructors
-    public Node(int newData){
+    public Node1(int newData){
         this.data = newData;
         next = null;
     }
-    public Node(int newData, Node newNnext){
+    public Node1(int newData, Node1 newNnext){
         data = newData;
         next = newNnext;
     }
 
-    public Node getNext() {
+    public Node1 getNext() {
         return next;
     }
 
@@ -21,7 +21,7 @@ public class Node {
         return data;
     }
 
-    public void setNext(Node next) {
+    public void setNext(Node1 next) {
         this.next = next;
     }
 

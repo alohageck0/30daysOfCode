@@ -2,7 +2,7 @@ import java.util.LinkedList;
 
 public class LinkedListUS {
     //Porps
-    Node head;
+    Node1 head;
     int count;
 
 
@@ -12,7 +12,7 @@ public class LinkedListUS {
 //        count = 0;
 //    }
 
-    public LinkedListUS(Node newHead) {
+    public LinkedListUS(Node1 newHead) {
         head = newHead;
         count = 1;
     }
@@ -20,8 +20,8 @@ public class LinkedListUS {
     //Metdhods
     //add
     public void add(int newData) {
-        Node temp = new Node(newData);
-        Node current = head;
+        Node1 temp = new Node1(newData);
+        Node1 current = head;
         while (current.getNext() != null) {
             current = current.getNext();
         }
@@ -34,7 +34,7 @@ public class LinkedListUS {
         if (index <= 0) {
             return -1;
         }
-        Node current = head;
+        Node1 current = head;
         for (int i = 1; i < index; i++) {
             current = current.getNext();
         }
@@ -55,7 +55,7 @@ public class LinkedListUS {
     //remove
     public void remove() {
         //remove from back of the list
-        Node current = head;
+        Node1 current = head;
         while (current.getNext().getNext() != null) {
             current = current.getNext();
         }

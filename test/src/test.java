@@ -1,5 +1,8 @@
 public class test {
     public static void main(String[] args) {
-        System.out.println(1/2);
+        int N = 4;
+        while (N-->0){
+            System.out.println(N);
+        }
     }
 }
