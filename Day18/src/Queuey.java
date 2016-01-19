@@ -1,5 +1,4 @@
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Queuey {
     LinkedList queue;
@@ -31,6 +30,14 @@ public class Queuey {
     }
 
     public static void main(String[] args) {
+        Stack<String> stacky = new Stack<>();
+        stacky.push("there");
+        stacky.push("Hi");
+        System.out.print(stacky.pop() + " ");
+        System.out.println(stacky.peek());
+        System.out.print(stacky.pop() + "! ");
+        System.out.println(stacky.size());
+
 //        Queuey numberQueue = new Queuey();
 //        numberQueue.enqueue(5);
 //        numberQueue.enqueue(7);
@@ -39,11 +46,11 @@ public class Queuey {
 //        System.out.println("Peek at ceond out " + numberQueue.peek());
 //        System.out.println("Second out " + numberQueue.dequeue());
 //        System.out.println("Third out " + numberQueue.dequeue());
-        Queuey stringQueue = new Queuey();
-        stringQueue.enqueue("Hi");
-        stringQueue.enqueue("there");
-        System.out.print(stringQueue.dequeue() + " ");
-        System.out.print(stringQueue.dequeue() + ". ");
+//        Queuey stringQueue = new Queuey();
+//        stringQueue.enqueue("Hi");
+//        stringQueue.enqueue("there");
+//        System.out.print(stringQueue.dequeue() + " ");
+//        System.out.print(stringQueue.dequeue() + ". ");
 
     }
 }
