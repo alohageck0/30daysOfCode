@@ -1,6 +1,6 @@
 
 public interface Character {
-    //interface
+
     String base = "character";
 
     void attack();

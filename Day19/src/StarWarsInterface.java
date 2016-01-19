@@ -12,7 +12,6 @@ class StarWarsInterfacea {
     }
 
     public static void main(String[] args) {
-        //practiceefewrfe
         Enemy dartWader = new Enemy();
         Hero ObiWanKenobi = new Hero();
         dartWader.attack();

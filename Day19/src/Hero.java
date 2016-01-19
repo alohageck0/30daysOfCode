@@ -1,7 +1,7 @@
 
 public class Hero implements Character {
     public String weapon = "Lightsaber";
-//adasd
+
     public Hero(){
 
     }

@@ -1,6 +1,4 @@
-/**
- * Created by Evgenii on 1/19/2016.
- */
+
 public class Enemy implements Character {
     public String weapon = "Lightsaber";
 
@@ -24,5 +22,6 @@ public class Enemy implements Character {
 
     public void weaponDraw(){
         System.out.println("Draw weapon");
+        //imp later
     }
 }
