@@ -8,7 +8,7 @@ public class Solution {
         String s = sc.nextLine();
         StringTokenizer result = new StringTokenizer(s, delimiters);
         System.out.println(result.countTokens());
-        for (int i = 0; i <= result.countTokens(); i++) {
+        while (result.hasMoreTokens()) {
             System.out.println(result.nextToken());
         }
     }
