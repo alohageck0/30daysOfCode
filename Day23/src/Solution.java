@@ -16,18 +16,19 @@ class Solution {
     static void levelOrder(Node root) {
         if (root == null) {
             return;
-        } else {
-            Queue<Node> queue = new LinkedList<>();
-            queue.clear();
-            queue.add(root);
-
-            while (!queue.isEmpty()) {
-                Node print = queue.remove();
-                System.out.print(print.data + " ");
-                if (root.left != null) queue.add(root.left);
-                if (root.right != null) queue.add(root.right);
-            }
         }
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.clear();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Node print = queue.remove();
+            System.out.print(print.data + " ");
+            if (print.left != null) queue.add(print.left);
+            if (print.right != null) queue.add(print.right);
+        }
+
     }
 
 
