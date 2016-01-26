@@ -1,21 +1,23 @@
 import java.util.Scanner;
 
 public class Solution {
-    public static String ifPrime(long number) {
-        if (number == 2 || number == 3 || number == 5 || number == 7 || number == 11) {
+    public static String ifPrime(int number) {
+        if (number <= 1) {
+            return "Not prime";
+        } else if (number <= 3) {
             return "Prime";
-        } else if (number % 2 == 0 || number == 1 || number == 0) {
+        } else if (number % 2 == 0 || number % 3 == 0) {
             return "Not prime";
         } else {
-            for (int i = 3; i < Math.sqrt(number); i++) {
-                if (number % i == 0) {
+            int temp = 5;
+            while (temp * temp < number) {
+                if (number % temp == 0 || number % (temp + 2) == 0) {
                     return "Not prime";
-                } else {
-                    return "Prime";
                 }
+                temp = temp + 6;
             }
         }
-        return null;
+        return "Prime";
     }
 
     public static void main(String[] args) {
