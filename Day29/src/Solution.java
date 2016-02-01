@@ -3,9 +3,10 @@ import java.util.Scanner;
 public class Solution {
     public static boolean ifFunny(String strin) {
         boolean result = true;
-        int n = strin.length()-1;
-        for (int i = 1; i < n; i++) {
-            if (Math.abs((int) strin.charAt(i + 1) - (int) strin.charAt(i)) != Math.abs((int) strin.charAt(n - i) - (int) strin.charAt(n - i - 1))) {
+        StringBuilder rev = new StringBuilder(strin);
+        int n = strin.length() - 1;
+        for (int i = 0; i < n; i++) {
+            if (Math.abs((int) strin.charAt(i + 1) - (int) strin.charAt(i)) != Math.abs((int) rev.reverse().toString().charAt(i + 1) - (int) rev.reverse().toString().charAt(i))) {
                 result = false;
             }
         }
@@ -16,7 +17,12 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T-- > 0) {
-            System.out.println(ifFunny(sc.next()));
+            if (ifFunny(sc.nextLine())) {
+                System.out.println("Funny");
+            } else {
+                System.out.println("Not Funny");
+            }
+
         }
     }
 }
