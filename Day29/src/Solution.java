@@ -6,7 +6,8 @@ public class Solution {
         StringBuilder rev = new StringBuilder(strin);
         int n = strin.length() - 1;
         for (int i = 0; i < n; i++) {
-            if (Math.abs((int) strin.charAt(i + 1) - (int) strin.charAt(i)) != Math.abs((int) rev.reverse().toString().charAt(i + 1) - (int) rev.reverse().toString().charAt(i))) {
+            if (Math.abs((int) strin.charAt(i + 1) - (int) strin.charAt(i)) !=
+                    Math.abs((int) rev.reverse().toString().charAt(i + 1) - (int) rev.reverse().toString().charAt(i))) {
                 result = false;
             }
         }
